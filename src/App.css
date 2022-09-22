@@ -39,7 +39,6 @@ img {
   flex-direction: row;  
   align-items: center;    
   justify-content: center;
-  margin-right: 3rem;
   justify-content: space-around;
 }
 
@@ -52,10 +51,18 @@ img {
   flex-direction: row;  
   align-items: center;    
   justify-content: center;
-  margin-right: 3rem;
   justify-content: space-around;
 }
 
 .line-1 {
   display: inline-block;
+}
+
+.footer {
+  background-color: #64c9ff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
 }
