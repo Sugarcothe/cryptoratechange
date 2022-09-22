@@ -1,4 +1,5 @@
 import './App.css';
+// import sanityClient from '../client.js'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <div className='table-head'>
             <div className='line-1'>
               {/* <img src="img/bit.png" alt=''/> */}
-              <h3>Currency</h3>
+              <h3>CURRENCIES</h3>
             </div>
             <div className='line-1'>
               <h3>WE BUY</h3>
