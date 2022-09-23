@@ -11,14 +11,12 @@ function App() {
       .fetch(`*[_type == "currencies"] {
         name,
         title,
-        fields {
-          name,
-        }
-        
+        fields
       }`
       ).then((data) => setPost(data))
       .catch(console.error)
   }, [])
+
 
   return (
     <div className="App">
@@ -41,18 +39,18 @@ function App() {
             </div>
           </div>
           <hr className="header-hr"/>
-            {postData && postData.map((post, index) => (
+            {postData && postData.map((currencies, index) => (
               <div className='table-card'>
-              <div className='line-1'>
-                {/* <img src="img/bit.png" alt=''/> */}
-                <h3>{}</h3>
-              </div>
-              <div className='line-1'>
-                <h3><span>$</span>{currencies.name1}</h3>
-              </div>
-              <div className='line-1'>
-                <h3><span>$</span>{currencies.name2}</h3>
-              </div>
+                <div className='line-1'>
+                  {/* <img src="img/bit.png" alt=''/> */}
+                  <h3>{}</h3>
+                </div>
+                <div className='line-1'>
+                  <h3><span>$</span>{currencies.fields.buy}</h3>
+                </div>
+                <div className='line-1'>
+                  <h3><span>$</span>{currencies.fields.sell}</h3>
+                </div>
            </div>
             ))
 }
@@ -64,9 +62,11 @@ function App() {
       <footer className='footer'>
         <h2>We are fast and reliable</h2>
         <h4><span>Tel:</span>+905488218164, +2349134060609</h4>
-        {/* <div className='links'>
-          <a target='_blank' href=''></a>
-        </div> */}
+        <div className='links'>
+          <p><span>INSTAGRAM: </span>@cryptopoko</p>
+          <p><span>FACEBOOK: </span>@cryptopoko</p>
+          <p><span>TWITTER: </span>@cryptopoko</p>
+        </div>
       </footer>
     </div>
     
