@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import currencies from './cryptopoko-backend/schemas/currencies';
 import './App.css';
-import sanityClient from './client'
+import sanityClient from './client.js'
 
 function App() {
   const [postData, setPost] = useState(null)
@@ -11,7 +11,11 @@ function App() {
       .fetch(`*[_type == "currencies"] {
         name,
         title,
-        fields
+        fields {
+          name,
+          title,
+          type
+        }
       }`
       ).then((data) => setPost(data))
       .catch(console.error)
