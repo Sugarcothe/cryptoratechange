@@ -46,11 +46,12 @@ useEffect(() => {
                 </div>
               </div> 
               <hr/>
+
               </>  
             ))}
               
 
-         
+         {/* Github credentials */}
         </div>
       </div>
       <footer className='footer'>
