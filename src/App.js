@@ -1,26 +1,14 @@
-import React, {useState, useEffect} from 'react'
-import currencies from './cryptopoko-backend/schemas/currencies';
 import './App.css';
-import sanityClient from './client.js'
+import React, { useState, useEffect} from "react"
+import useContentful from './useContentful';
 
 function App() {
-  const [postData, setPost] = useState(null)
-
-  useEffect(() => {
-    sanityClient
-      .fetch(`*[_type == "currencies"] {
-        name,
-        title,
-        fields {
-          name,
-          title,
-          type
-        }
-      }`
-      ).then((data) => setPost(data))
-      .catch(console.error)
-  }, [])
-
+const [post, setPost] = useState([])
+const {getPost } = useContentful();
+  
+useEffect(() => {
+  getPost().then((response) => setPost(response))
+})
 
   return (
     <div className="App">
@@ -32,8 +20,7 @@ function App() {
         <div className='table'>
           <div className='table-head'>
             <div className='line-1'>
-              {/* <img src="img/bit.png" alt=''/> */}
-              <h3>CURRENCIES</h3>
+              <h3>CURRENCY</h3>
             </div>
             <div className='line-1'>
               <h3>WE BUY</h3>
@@ -43,23 +30,26 @@ function App() {
             </div>
           </div>
           <hr className="header-hr"/>
-            {postData && postData.map((currencies, index) => (
+
+          {/* HERE */}
+            {post.map((post, index) => ( 
+              <>
               <div className='table-card'>
                 <div className='line-1'>
-                  {/* <img src="img/bit.png" alt=''/> */}
-                  <h3>{}</h3>
+                  <h3>{post.currency}</h3>
                 </div>
                 <div className='line-1'>
-                  <h3><span>$</span>{currencies.fields.buy}</h3>
+                  <h3><span>$</span>{post.weBuy}</h3>
                 </div>
                 <div className='line-1'>
-                  <h3><span>$</span>{currencies.fields.sell}</h3>
+                  <h3><span>$</span>{post.weSell}</h3>
                 </div>
-           </div>
-            ))
-}
-         
-          <hr/>
+              </div> 
+              <hr/>
+              </>  
+            ))}
+              
+
          
         </div>
       </div>

@@ -23,12 +23,12 @@
 }
 
 img {
-  width: 20rem;
+  width: 15rem;
 }
 
 .table {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 10px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ img {
 }
 
 .header-hr {
-  Margin-bottom: 20px;
+  Margin-bottom: 5px;
 }
 
 .table-card {
@@ -60,9 +60,10 @@ img {
 
 .footer {
   background-color: #64c9ff;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
-
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
