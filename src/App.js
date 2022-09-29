@@ -39,10 +39,10 @@ useEffect(() => {
                   <h3>{post.currency}</h3>
                 </div>
                 <div className='line-1'>
-                  <h3><span>$</span>{post.weBuy}</h3>
+                  <h3><span></span>{post.weBuy}</h3>
                 </div>
                 <div className='line-1'>
-                  <h3><span>$</span>{post.weSell}</h3>
+                  <h3><span></span>{post.weSell}</h3>
                 </div>
               </div> 
               <hr/>
