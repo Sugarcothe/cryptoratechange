@@ -37,7 +37,7 @@ function App() {
         </div>
       </div>
       <footer className="footer">
-        <h2>Daily rates are not static</h2>
+        <h2>Daily rates are not static, they can be modified</h2>
         <h4>
           <span>Tel:</span>+905488218164, +2349134060609
         </h4>
