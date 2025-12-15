@@ -71,16 +71,16 @@ function App() {
             <img src="Noctarwallet.png" alt="Noctarwallet" className="app-logo" />
             <p>Download and use <strong>Noctarwallet</strong> for all crypto trading</p>
             <div className="store-buttons">
-              <a href="https://play.google.com/store" className="store-btn">Google Play</a>
-              <a href="https://apps.apple.com" className="store-btn">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.noctardev.noctarwallet&hl=en" className="store-btn">Google Play</a>
+              <a href="https://apps.apple.com/us/app/noctar-wallet/id6752936301" className="store-btn">App Store</a>
             </div>
           </div>
           <div className="app-item">
             <img src="Pokowave.png" alt="Pokowave" className="app-logo" />
             <p>Download and use <strong>Pokowave</strong> for Bill payment</p>
             <div className="store-buttons">
-              <a href="https://play.google.com/store" className="store-btn">Google Play</a>
-              <a href="https://apps.apple.com" className="store-btn">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.pokowavedev.pokowavemobileapp&hl=en" className="store-btn">Google Play</a>
+              <a href="https://apps.apple.com/us/app/pokowave/id6741422852" className="store-btn">App Store</a>
             </div>
           </div>
         </div>
