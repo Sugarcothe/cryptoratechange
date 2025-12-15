@@ -23,8 +23,9 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="header">
-          <img src="assets/crypoko.png" alt="crypto" />
-          <h2 className="logo-header">CRYPTOPOKO</h2>
+          <img src="assets/crypoko.png" alt="Cryptopoko Logo" />
+          <h1 className="logo-header">CRYPTOPOKO</h1>
+          <p className="subtitle">Your Trusted Crypto Exchange Partner</p>
         </div>
         <div className="table">
           <table>
