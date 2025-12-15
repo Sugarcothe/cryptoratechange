@@ -52,6 +52,20 @@ body {
   font-weight: 400;
 }
 
+.date {
+  color: #1A75BC;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-icon {
+  font-size: 1.2rem;
+}
+
 img {
   width: 120px;
   height: 120px;
@@ -69,7 +83,7 @@ img:hover {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 2rem;
+  /* padding: 2rem; */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
@@ -105,6 +119,7 @@ td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   font-weight: 500;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 tbody tr:hover td {
@@ -152,19 +167,68 @@ tbody tr:last-child td:last-child {
   flex-wrap: wrap;
 }
 
-.links p {
-  font-size: 0.9rem;
+.social-link {
+  font-size: 2rem;
+  text-decoration: none;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.links p:hover {
+.social-link:hover {
   opacity: 1;
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.links span {
-  color: #ffffff;
-  font-weight: 600;
+.app-section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app-item {
+  text-align: center;
+}
+
+.app-item p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.store-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.store-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.app-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
