@@ -36,13 +36,14 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {post && post.map((post, index) => (
-                <tr key={index}>
-                  <td>{post.currency}</td>
-                  <td>{post.weBuy}</td>
-                  <td>{post.weSell}</td>
-                </tr>
-              ))}
+              {post &&
+                post.map((post, index) => (
+                  <tr key={index}>
+                    <td>{post.currency}</td>
+                    <td>{post.weBuy}</td>
+                    <td>{post.weSell}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
 
@@ -52,7 +53,7 @@ function App() {
       <footer className="footer">
         <h2>Daily rates are not static, they can be modified</h2>
         <h4>
-          <span>Tel:</span>+905488218164, +2349134060609
+          <span>Tel:</span> 08161716858
         </h4>
         <div className="links">
           <p>
