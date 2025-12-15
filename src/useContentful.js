@@ -4,8 +4,7 @@ const useContentful = () => {
 
     const client = createClient({
         space: "mp9j0j5s0k9r",
-        accessToken: "oJcHM8Gf07_ZUYM6GGBZUR64F7mwKNT_8Zb2s899K_g",
-        host: "preview.contentful.com"
+        accessToken: "oJcHM8Gf07_ZUYM6GGBZUR64F7mwKNT_8Zb2s899K_g"
     })
 
     const getPost = async () => {

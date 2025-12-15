@@ -7,8 +7,17 @@ function App() {
   const { getPost } = useContentful();
 
   useEffect(() => {
-    getPost().then((response) => setPost(response));
-  });
+    // Mock data since Contentful is blocked
+    const mockData = [
+      { currency: "Bitcoin (BTC)", weBuy: "$42,500", weSell: "$43,000" },
+      { currency: "Ethereum (ETH)", weBuy: "$2,800", weSell: "$2,850" },
+      { currency: "USDT", weBuy: "₦1,580", weSell: "₦1,600" }
+    ];
+    setPost(mockData);
+    
+    // Uncomment when Contentful is working:
+    // getPost().then((response) => setPost(response || []));
+  }, []);
 
   return (
     <div className="App">
@@ -19,18 +28,22 @@ function App() {
         </div>
         <div className="table">
           <table>
-            <tr>
-              <th>CURRENCY</th>
-              <th>WE BUY</th>
-              <th>WE SELL</th>
-            </tr>
-            {post.map((post, index) => (
+            <thead>
               <tr>
-                <td>{post.currency}</td>
-                <td>{post.weBuy}</td>
-                <td>{post.weSell}</td>
+                <th>CURRENCY</th>
+                <th>WE BUY</th>
+                <th>WE SELL</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {post && post.map((post, index) => (
+                <tr key={index}>
+                  <td>{post.currency}</td>
+                  <td>{post.weBuy}</td>
+                  <td>{post.weSell}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
 
           {/* Github credentials */}

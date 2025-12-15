@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center;  */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-header {
@@ -47,10 +47,8 @@ tr:nth-child(even) {
 
 .footer {
   background-color: #64c9ff;
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-top: auto;
 }
