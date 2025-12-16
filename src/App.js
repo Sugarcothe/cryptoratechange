@@ -43,8 +43,8 @@ function App() {
               {exchangeRates.map((rate, index) => (
                 <tr key={index}>
                   <td>{rate.currency}</td>
-                  <td>${rate.weBuy}</td>
-                  <td>${rate.weSell}</td>
+                  <td>{rate.weBuy}</td>
+                  <td>{rate.weSell}</td>
                 </tr>
               ))}
             </tbody>
